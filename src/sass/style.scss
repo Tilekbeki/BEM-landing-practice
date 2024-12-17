@@ -1,0 +1,28 @@
+
+html {
+    scroll-behavior: smooth;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1120px;
+    margin: 0 auto;
+}
+
+body {
+    background: rgb(248, 248, 248);
+}
+
+
+p {
+    margin: 0;
+}
+@import 'blocks/header';
+@import 'blocks/menu';
+@import 'blocks/service';
+@import 'blocks/post';
+@import 'blocks/media';

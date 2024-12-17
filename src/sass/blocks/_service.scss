@@ -1,0 +1,61 @@
+.title {
+    position: relative;
+    color: rgb(27, 28, 33);
+    font-family: TT Lakes;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+    text-align: left;
+   
+}
+.title::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    left: 20px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background: rgb(65, 246, 215);
+} 
+.service {
+    padding: 24px 0px 0px 0px;
+    &__title {
+        margin-bottom: 8px;
+        width: 1120px;
+        margin: 0 auto;
+        padding-left: 40px;
+        margin-bottom: 32px;
+    }
+    &-menu {
+        margin-bottom: 16px;
+        overflow: unset;
+        &__list{
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            width: 100%;
+            flex-wrap: wrap;
+            
+            align-items: center;
+        }
+        &__link{
+            display: block;
+            color: rgb(126, 126, 130);
+            font-family: TT Lakes;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            text-align: left;
+            &_active {
+                border: 2px solid rgb(184, 255, 236);
+                border-radius: 6px;
+                padding: 8px 16px;    
+                background: rgb(255, 255, 255);
+            }
+        }
+    }
+    
+}

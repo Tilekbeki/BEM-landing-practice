@@ -1,0 +1,64 @@
+.post {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    &_desktop {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+    }
+    &_mobile {
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+    }
+    &__text {
+        padding: 0;
+        margin: 0;
+        color: rgb(27, 28, 33);
+        font-family: TT Lakes;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        text-align: left;
+        &_desktop {
+            margin-bottom: 10px;
+            width: 490px;
+        }
+        &_mobile {
+            padding: 0 16px;
+        }
+        
+    }
+    &__img {
+        width: 531px;
+        height: 383px;
+    }
+    &__link {
+        color: rgb(27, 28, 33);
+        font-family: TT Lakes;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        position: relative;
+        text-decoration: none;
+        padding-left: 32px;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            background: url("../icons/arrows.svg");
+            left: 0px;
+            width: 24px;
+            height: 24px;
+            top: -3px;
+        }
+        &_mobile {
+            padding: 0 16px;
+            padding-left: 32px;
+        }
+    }
+}

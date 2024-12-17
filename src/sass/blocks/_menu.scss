@@ -1,0 +1,95 @@
+.contact-links {
+    margin-right: 26px;
+    display: flex;
+    gap: 16px;
+}
+.service-links {
+    display: flex;
+    position: relative;
+    gap: 16px;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 32px;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 1px;
+        background: rgb(234, 234, 234);
+}
+}
+.logo{
+        
+    margin-left: 26px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 32px;
+        left: -20px;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 1px;
+        background: #eaeaea;
+    }
+}
+.menu {
+    &__wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 38px;
+    }
+    &__column {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+    
+    &-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background: rgb(255, 62, 121);
+    }
+    &-burger {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background: rgb(255, 62, 121);
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        span {
+            display: block;
+        }
+        span:first-child {
+            width: 18px;
+            height: 2px;
+            border-radius: 1px;
+            background: rgb(255, 255, 255);
+        }
+        span:nth-child(2) {
+            width: 10px;
+            height: 2px;
+            background: #fff;
+            border-radius: 1px;
+            background: rgb(255, 255, 255);
+        }
+        span:last-child {
+            width: 14px;
+            height: 2px;
+            background: #fff;
+            border-radius: 1px;
+            background: rgb(255, 255, 255);
+        }
+    }
+}
