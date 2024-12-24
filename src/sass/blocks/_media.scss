@@ -5,18 +5,24 @@
         padding: 0 33px;
     }
     .header {
-        display: flex;
-        align-items: center;
+        position: absolute;
+    display: flex;
+    top: 42px;// добавил 42 пикселя сверху
+    align-items: center;
+    padding: 0 0;//обнулил было 18
+    background: #f8f8f8;
+    left: 50%;
+  transform: translateX(-50%);
     }
     .contact-links {
         margin-right: 26px;
-        display: flex;
+        display: none;
         gap: 16px;
     }
     .service-links {
         display: flex;
         position: relative;
-        gap: 16px;
+        gap: 160px;
         &::before {
             content: "";
             position: absolute;
@@ -24,6 +30,7 @@
             height: 32px;
             left: -20px;
             top: 50%;
+            transform: translateY(-50%);
             border-radius: 1px;
             background: rgb(234, 234, 234);
     }
@@ -32,7 +39,7 @@
         &__wrap {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: flex-end;
             gap: 38px;
         }
         &__column {
@@ -40,16 +47,50 @@
             display: flex;
             align-items: center;
             gap: 16px;
+            &:first-child {
+                display: none;
+            }
         }
         
         &-link {
             display: flex;
+            position: relative;
             justify-content: center;
             align-items: center;
             width: 40px;
             height: 40px;
             border-radius: 20px;
             background: rgb(255, 62, 121);
+            &:last-child::before {
+                content: "Оставить заявку";
+                position: absolute;
+                right: 48px;
+                color: rgb(27, 28, 33);
+                font-family: TT Lakes;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                text-align: right;
+                width: 125px;
+    
+                
+            }
+            &:nth-child(1)::before {
+                content: "Статус ремонта";
+                position: absolute;
+                right: 48px;
+                color: rgb(27, 28, 33);
+                font-family: TT Lakes;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                text-align: right;
+                width: 125px;
+                
+            }
+            
         }
         &-burger {
             width: 40px;
@@ -98,19 +139,11 @@
         text-align: left;
        
     }
-    .title::before {
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 40px;
-        left: -33px;
-        background: rgb(65, 246, 215);
-    } 
     .service {
-        padding: 24px 0px 0px 0px;
+        padding: 42px 0px 0px 0px;
         &__title {
             margin-bottom: 8px;
-            margin-left: 33px;
+            margin-left: 0;
             padding-left: 0px;
         }
         &-menu {
@@ -219,93 +252,12 @@
 @media (max-width: 1119px) {
     
     .container {
-        width: 1063px;
+        width: 748px;
         margin: 0 auto;
         padding: 0 33px;
     }
-    .header {
-        display: flex;
-        align-items: center;
-    }
-    .contact-links {
-        margin-right: 26px;
-        display: flex;
-        gap: 16px;
-    }
-    .service-links {
-        display: flex;
-        position: relative;
-        gap: 16px;
-        &::before {
-            content: "";
-            position: absolute;
-            width: 2px;
-            height: 32px;
-            left: -20px;
-            top: 50%;
-            transform: translateY(-50%);
-            border-radius: 1px;
-            background: rgb(234, 234, 234);
-    }
-    }
-    .menu {
-        &__wrap {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 38px;
-        }
-        &__column {
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        
-        &-link {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 20px;
-            background: rgb(255, 62, 121);
-        }
-        &-burger {
-            width: 40px;
-            height: 40px;
-            border-radius: 20px;
-            background: rgb(255, 62, 121);
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            align-items: center;
-            justify-content: center;
-            span {
-                display: block;
-            }
-            span:first-child {
-                width: 18px;
-                height: 2px;
-                border-radius: 1px;
-                background: rgb(255, 255, 255);
-            }
-            span:nth-child(2) {
-                width: 10px;
-                height: 2px;
-                background: #fff;
-                border-radius: 1px;
-                background: rgb(255, 255, 255);
-            }
-            span:last-child {
-                width: 14px;
-                height: 2px;
-                background: #fff;
-                border-radius: 1px;
-                background: rgb(255, 255, 255);
-            }
-        }
-    }
+   
+   
 /*service section*/
     .title {
         position: relative;
@@ -318,19 +270,10 @@
         text-align: left;
        
     }
-    .title::before {
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 40px;
-        left: -33px;
-        background: rgb(65, 246, 215);
-    } 
     .service {
-        padding: 24px 0px 0px 0px;
         &__title {
             margin-bottom: 8px;
-            margin-left: 33px;
+            margin-left: 0;
         }
         &-menu {
             margin-bottom: 16px;
@@ -372,7 +315,7 @@
         &_desktop {
             display: flex;
             gap: 10px;
-            justify-content: unset;
+            justify-content: space-between;
             visibility: visible;
         }
         &_mobile {
@@ -435,35 +378,33 @@
 
 @media (max-width: 992px) {
     .service {
-        padding: 24px 0px 0px 0px;
         &__title {
             margin-bottom: 32px;
             margin-left: unset;
-            padding-left: 30px;
         }
     }
-    .title::before {
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 40px;
-        left: 0px;
-        background: #41f6d7;
-      }
 
     }
 
 
 @media (max-width: 768px) {
-  
+    .hidden-text {
+        display: none;
+    }
     .container {
-        width: 93vw;
+        // width: 93vw;
         margin: 0 auto;
         padding: 0 24px;
     }
     .header {
         display: flex;
         align-items: center;
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: unset;
+        padding: 18px 0;
+        background: #fff;
     }
     .contact-links {
         margin-right: 26px;
@@ -498,6 +439,9 @@
             display: flex;
             align-items: center;
             gap: 16px;
+            &:first-child {
+                display: flex;
+            }
         }
         
         &-link {
@@ -508,6 +452,15 @@
             height: 40px;
             border-radius: 20px;
             background: rgb(255, 62, 121);
+            &:last-child::before {
+                display: none;
+    
+                
+            }
+            &:nth-child(1)::before {
+                display: none;
+                
+            }
         }
         &-burger {
             width: 40px;
@@ -556,20 +509,12 @@
         text-align: left;
        
     }
-    .title::before {
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 40px;
-        left: 0px;
-        background: rgb(65, 246, 215);
-    } 
+    
     .service {
         padding: 24px 0px 0px 0px;
         &__title {
             margin-bottom: 32px;
             margin-left: 0px;
-            padding-left: 24px;
         }
         &-menu {
             margin-bottom: 32px;
@@ -635,9 +580,10 @@
         }
         &__img {
             width: 360px;
-            height: 260px;
+            height: auto;
         }
         &__link {
+            position: relative;
             color: rgb(27, 28, 33);
             font-family: TT Lakes;
             font-size: 16px;
@@ -653,20 +599,20 @@
                 content: "";
                 position: absolute;
                 background: url("../icons/arrows.svg");
-                left: 0px;
+                left: 25px;
                 width: 24px;
                 height: 24px;
                 top: -3px;
             }
             &_mobile {
                 padding: 0 16px;
-                padding-left: 32px;
+                padding-left: 57px;
             }
         }
     }
 }
 
-@media (max-width:576px){
+@media (max-width:732px){
     .contact-links {
         display: none;
     }
@@ -685,6 +631,41 @@
             transform: translateY(-50%);
             border-radius: 1px;
             background: #eaeaea;
+        }
+    }
+    .post {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        &_desktop {
+            display: none;
+            visibility: hidden;
+            flex-direction: column;
+            gap: 16px;
+        }
+        &_mobile {
+            display: flex;
+            flex-direction: column;
+            visibility: visible;
+            gap: 16px;
+        }
+        &__text {
+            &_desktop {
+                width: 100%;
+            }
+            &_mobile {
+                visibility: visible;
+                padding: 0 24px;
+                order: -2;
+            }
+        }
+        &__img {
+            width: 100%;
+        }
+        &__link {
+            &_mobile {
+                order:-1;
+            }
         }
     }
 }
@@ -785,20 +766,11 @@
         text-align: left;
        
     }
-    .title::before {
-        content: "";
-        position: absolute;
-        width: 4px;
-        height: 40px;
-        left: 0px;
-        background: rgb(65, 246, 215);
-    } 
     .service {
         padding: 24px 0px 0px 0px;
         &__title {
             margin-bottom: 24px;
             margin-left: 0px;
-            padding-left: 16px;
         }
         &-menu {
             margin-bottom: 24px;

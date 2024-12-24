@@ -9,23 +9,20 @@
     text-align: left;
    
 }
-.title::before {
-    content: "";
+.title-decor {
     position: absolute;
     width: 4px;
     height: 40px;
-    left: 20px;
+    left: 0;
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     background: rgb(65, 246, 215);
 } 
 .service {
-    padding: 24px 0px 0px 0px;
+    padding: 42px 0px 0px 0px;//было 24 поставил 42
     &__title {
         margin-bottom: 8px;
-        width: 1120px;
         margin: 0 auto;
-        padding-left: 40px;
         margin-bottom: 32px;
     }
     &-menu {
@@ -39,6 +36,9 @@
             flex-wrap: wrap;
             
             align-items: center;
+            a {
+                text-decoration: none;
+            }
         }
         &__link{
             display: block;
