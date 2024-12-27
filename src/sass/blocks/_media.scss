@@ -417,6 +417,7 @@
         gap: 16px;
         &::before {
             content: "";
+            display: block;
             position: absolute;
             width: 2px;
             height: 32px;
@@ -668,6 +669,15 @@
             }
         }
     }
+    .menu {
+        width: inherit;
+    }
+}
+
+@media (max-width:730px) { 
+ .container {
+    width: 88vw;
+ }
 }
 
 @media (max-width: 320px) {
@@ -851,5 +861,8 @@
                 padding-left: 32px;
             }
         }
+    }
+    .menu {
+        width: unset;
     }
 }
