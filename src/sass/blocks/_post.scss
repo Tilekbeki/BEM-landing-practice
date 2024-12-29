@@ -1,11 +1,15 @@
 .post {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap: 16px;
     &_desktop {
         display: flex;
         gap: 10px;
         justify-content: space-between;
+        div{
+            display: inline;
+            width: 46%;
+        }
     }
     &_mobile {
         display: none;
@@ -24,7 +28,8 @@
         text-align: left;
         &_desktop {
             margin-bottom: 10px;
-            width: 490px;
+            width:unset;
+           
         }
         &_mobile {
             padding: 0 16px;

@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
     .container {
-        width: 1063px;
+        max-width: 1063px;
         margin: 0 auto;
         padding: 0 33px;
     }
@@ -181,7 +181,7 @@
 
     .post {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         gap: 16px;
         &_desktop {
             display: flex;
@@ -208,7 +208,7 @@
             &_desktop {
                 visibility: visible;
                 margin-bottom: 10px;
-                width: 490px;
+                width: 100%;
             }
             &_mobile {
                 visibility: hidden;
@@ -217,8 +217,8 @@
             
         }
         &__img {
-            width: 531px;
-            height: 383px;
+            width: 50%;
+            height: auto;
         }
         &__link {
             color: rgb(27, 28, 33);
@@ -252,11 +252,14 @@
 @media (max-width: 1119px) {
     
     .container {
-        width: 748px;
+        max-width: 738px;
         margin: 0 auto;
         padding: 0 33px;
     }
    
+    .hidden-text {
+        display: none; 
+     }
    
 /*service section*/
     .title {
@@ -310,7 +313,7 @@
 
     .post {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         gap: 16px;
         &_desktop {
             display: flex;
@@ -336,7 +339,7 @@
             text-align: left;
             &_desktop {
                 margin-bottom: 10px;
-                width: 320px;
+                width: 100%;
             }
             &_mobile {
                 padding: 0 16px;
@@ -379,7 +382,6 @@
 @media (max-width: 992px) {
     .service {
         &__title {
-            margin-bottom: 32px;
             margin-left: unset;
         }
     }
@@ -544,13 +546,16 @@
 
     .post {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         gap: 16px;
         &_desktop {
             display: flex;
             gap: 10px;
             justify-content: space-between;
             visibility: visible;
+            div {
+                width: 46%;
+            }
         }
         &_mobile {
             display: none;
@@ -570,7 +575,7 @@
             text-align: left;
             &_desktop {
                 margin-bottom: 10px;
-                width: 312px;
+                // width: 312px;
                 visibility: visible;
             }
             &_mobile {
@@ -581,7 +586,7 @@
         }
         &__img {
             width: 360px;
-            height: auto;
+            height: 208px;
         }
         &__link {
             position: relative;
@@ -600,7 +605,7 @@
                 content: "";
                 position: absolute;
                 background: url("../icons/arrows.svg");
-                left: 25px;
+                left: 0px;
                 width: 24px;
                 height: 24px;
                 top: -3px;
@@ -611,12 +616,14 @@
             }
         }
     }
+   
 }
 
 @media (max-width:732px){
     .contact-links {
         display: none;
     }
+    
     .logo{
         
         margin-left: 0px;
@@ -653,6 +660,7 @@
         &__text {
             &_desktop {
                 width: 100%;
+                
             }
             &_mobile {
                 visibility: visible;
@@ -662,6 +670,7 @@
         }
         &__img {
             width: 100%;
+            height: auto;
         }
         &__link {
             &_mobile {
@@ -669,20 +678,30 @@
             }
         }
     }
-    .menu {
-        width: inherit;
-    }
+ 
 }
 
 @media (max-width:730px) { 
  .container {
-    width: 88vw;
+    max-width: 100vw;
  }
 }
-
-@media (max-width: 320px) {
+@media (max-width: 568px) {
     .container {
-        width: unset;
+        padding: 0 16px;
+    }
+    .post {
+        &_mobile {
+            .container {
+                order: -1;
+                padding: 0 16px;
+            }
+        }
+    }
+}
+@media (max-width: 319px) {
+    .container {
+        max-width: unset;
         margin: 0 auto;
         padding: 0 16px;
     }
@@ -821,6 +840,9 @@
             flex-direction: column;
             visibility: visible;
             gap: 16px;
+            .container {
+                order: -1;
+            }
         }
         &__text {
             padding: 0;
@@ -843,7 +865,7 @@
             height: 230.8px;
         }
         &__link {
-            order: -1;
+            
             position: relative;
             text-decoration: none;
             
@@ -851,7 +873,7 @@
                 content: "";
                 position: absolute;
                 background: url("../icons/arrows.svg");
-                left: 8px;
+                left: 0px;
                 width: 24px;
                 height: 24px;
                 top: -3px;
@@ -864,5 +886,11 @@
     }
     .menu {
         width: unset;
+    }
+}
+
+@media(max-width: 300px) {
+    .container {
+        max-width: 100vw;
     }
 }
