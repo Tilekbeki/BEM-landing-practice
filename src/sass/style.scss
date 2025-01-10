@@ -7,7 +7,6 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid red;
 }
 
 .container {
@@ -27,4 +26,5 @@ p {
 @import 'blocks/menu';
 @import 'blocks/service';
 @import 'blocks/post';
+@import 'blocks/menu-mobile';
 @import 'blocks/media';
