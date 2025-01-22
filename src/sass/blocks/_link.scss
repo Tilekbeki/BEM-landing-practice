@@ -1,0 +1,42 @@
+.arrow-link {
+    display: block;
+    background-image: url('../icons/arrow-link.svg');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+}
+
+.show-link {
+    color: rgb(27, 28, 33);
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    position: relative;
+    text-decoration: none;
+    padding-left: 32px;
+    transform: none;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        background: url("../icons/arrows.svg");
+        left: 0px;
+        width: 24px;
+        height: 24px;
+        top: -3px;
+    }
+    &_mobile {
+        padding: 0 16px;
+        padding-left: 32px;
+    }
+    &_active {
+        &::before {
+            content: "";
+            transform: rotate(-180deg);
+         }
+    }
+}
