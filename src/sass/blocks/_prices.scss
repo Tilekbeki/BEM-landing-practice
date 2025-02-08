@@ -1,0 +1,192 @@
+.prices {
+    padding-bottom: 52px;
+    &__title {
+        margin-bottom: 63px;
+    }
+    &__slider {
+        position: relative;
+        margin-bottom: 44px;
+        display: none;
+        .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction, .price-slider__pagination {
+            position: absolute;
+            display: flex;
+            bottom: -30px;
+            justify-content: center;
+            span {
+                width: 12px;
+                height: 12px;
+                background: rgb(221, 221, 221);
+                
+            }
+            .swiper-pagination-bullet-active {
+                background: rgb(181, 182, 188);
+            }
+        }
+    }
+    .price {
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-template-rows: repeat(3,56px);
+        // row-gap: 16px;
+        // justify-content: space-between;
+        // background: #fff;
+        // padding: 16px;
+        // border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgb(234, 234, 234);
+        padding: 23px 0;
+        color: rgb(27, 28, 33);
+        font-family: TT Lakes;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        &__title {
+            width: 348px;
+            position: relative;
+        }
+        &__value {
+            width: 74px;
+            position: relative;
+        }
+        &__deadline {
+            width: 81px;
+            position: relative;
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            padding: 0 16px;
+            border-radius: 6px;
+        }
+        &__list {
+            padding-bottom: 32px;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            grid-column-start: 1;
+            grid-column-end: 1;
+            &:first-child {
+                grid-column-start: 1;
+                grid-column-end: 3; 
+            }
+            span {
+                color: rgb(126, 126, 130);
+                font-family: TT Lakes;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16px;
+                letter-spacing: 0px;
+                text-align: left;
+            }
+            p {
+                color: rgb(27, 28, 33);
+                font-family: TT Lakes;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 18px;
+                letter-spacing: 0.2px;
+                text-align: left;
+            }
+        }
+        a {
+            border-radius: 16px;
+            text-align: left;
+            align-self: center;
+            padding: 4px 12px;
+            background: rgb(255, 62, 121);
+            color: rgb(255, 255, 255);
+            font-family: TT Lakes;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: -0.15px;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            width: 119px;
+            &::after {
+                content: '';
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                background: url("../icons/arrow-link_without-circle.svg");
+                right: 8px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+[data-pricetitle]::before {
+    content: attr(data-pricetitle);
+    position: absolute;
+    bottom: 66px;
+    color: rgb(126, 126, 130);
+    font-family: TT Lakes;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+[data-pricevalue]::before {
+    content: attr(data-pricevalue);
+    position: absolute;
+    bottom: 66px;
+    color: rgb(126, 126, 130);
+    font-family: TT Lakes;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+[data-pricedeadline]::before {
+    content: attr(data-pricedeadline);
+    position: absolute;
+    bottom: 66px;
+    color: rgb(126, 126, 130);
+    font-family: TT Lakes;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.offer-text {
+    color: rgb(27, 28, 33);
+    font-family: TT Lakes;
+    font-size: 14px;
+    color: rgb(126, 126, 130);
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    text-align: left;
+    padding-bottom: 20px;
+    width: 421px;
+}
+
+.offer-link {
+    color: rgb(27, 28, 33);
+    font-family: TT Lakes;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+    text-decoration: none;
+    position: relative;
+    img {
+        padding-left: 10px;
+    }
+}

@@ -1,3 +1,16 @@
+@use 'blocks/title';
+@use 'blocks/link';
+@use 'blocks/header';
+@use 'blocks/menu';
+@use 'blocks/service';
+@use 'blocks/post';
+@use 'blocks/menu-mobile';
+@use 'blocks/companies';
+@use 'blocks/technologies';
+@use 'blocks/prices';
+@use 'blocks/footer';
+@use 'blocks/forms';
+@use 'blocks/media';
 
 html {
     scroll-behavior: smooth;
@@ -9,8 +22,44 @@ html {
     box-sizing: border-box;
 }
 
+
+main {
+    display: block;
+    width: 1064px;
+    margin: 0 34px 0 auto;
+    position: relative;
+    &::before {
+        content: '';
+        top: 0;
+        background: #ffff;
+        position: fixed;
+        display: block;
+        z-index: -1;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+        transition: all 0.5s;
+    }
+    &_active {
+        &::before {
+            content: "";
+            opacity: 0.96;
+         }
+    }
+}
+
+.main {
+    &_active {
+        &::before {
+            content: "";
+            opacity: 0.96;
+            z-index: 2;
+         }
+    }
+}
+
 .container {
-    width: 1120px;
+    width: 1064px;
     margin: 0 auto;
 }
 
@@ -22,12 +71,8 @@ body {
 p {
     margin: 0;
 }
-@import 'blocks/title';
-@import 'blocks/link';
-@import 'blocks/header';
-@import 'blocks/menu';
-@import 'blocks/service';
-@import 'blocks/post';
-@import 'blocks/menu-mobile';
-@import 'blocks/slider';
-@import 'blocks/media';
+
+.swiper-wrapper {
+    overflow: hidden;
+}
+

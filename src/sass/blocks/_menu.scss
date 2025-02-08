@@ -63,6 +63,11 @@
         height: 40px;
         border-radius: 20px;
         background: rgb(255, 62, 121);
+        transition: all 0.5s;
+        &:hover {
+            opacity: 0.5;
+            opacity: 0.5;
+        }
         &:last-child::before {
             content: "Оставить заявку";
             position: absolute;

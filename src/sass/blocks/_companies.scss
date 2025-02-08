@@ -1,0 +1,52 @@
+.companies {
+    padding-bottom: 52px;
+    &__title {
+        margin-bottom: 24px;
+    }
+    .company {
+        width: 240px;
+        height: 72px;
+        border: 1px solid rgb(234, 234, 234);
+        border-radius: 6px;
+        background: rgb(255, 255, 255);
+        display: flex;
+        align-items: center;
+        padding: 0 16px;
+        justify-content: space-between;
+    }
+    &-slider {
+        display: none;
+        position: relative;
+        .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+            position: absolute;
+            bottom: -30px;
+            span {
+                width: 12px;
+                height: 12px;
+                background: rgb(221, 221, 221);
+                
+            }
+            .swiper-pagination-bullet-active {
+                background: rgb(181, 182, 188);
+            }
+        }
+    }
+    
+    
+    
+    &-flex {
+        padding: 0px 0;
+        display: flex;
+        width: 100%;
+        column-gap: 32px;
+        row-gap: 16px;
+        flex-wrap: wrap;
+        height: 160px;
+        overflow: hidden;
+        margin-bottom: 24px;
+        .company {
+            width: 240px;
+        }
+    }
+}
+

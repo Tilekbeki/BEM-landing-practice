@@ -1,3 +1,18 @@
+@media (max-width: 1430px) {
+    .menu-mobile {
+        transform: translateX(-320px);
+    }
+    .title-decor {
+        left: 0;
+    }
+
+    main {
+        display: block;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+}
+
 @media (max-width: 1200px) {
     .container {
         max-width: 1063px;
@@ -379,9 +394,35 @@
     }
     .companies {
         &-flex {
+            column-gap: 24px;
             .company {
                 width: 224px;
             }
+        }
+    }
+    .technologies {
+        &-flex {
+            gap: 24px;
+        }
+        .technology {
+            width: 224px;
+        }
+    }
+   .prices {
+        .price {
+            &__list {
+                padding-bottom: 24px;
+            }
+        }
+   }
+   .technologies {
+    &__button {
+        display: block;
+    }
+    }
+    .footer {
+        &-descr {
+            width: 213px;
         }
     }
 }
@@ -397,6 +438,7 @@
 
 
 @media (max-width: 768px) {
+    
     .hidden-text {
         display: none;
     }
@@ -438,6 +480,11 @@
     }
     }
     .menu {
+        &-mobile {
+            &__footer {
+                margin-top: 32px;
+            }
+        }
         &__wrap {
             display: flex;
             align-items: center;
@@ -659,7 +706,10 @@
             }
         }
     }
-   
+    .menu-mobile{
+        padding: 18px 24px 0 24px;
+    }
+    
 }
 
 @media (max-width:732px){
@@ -732,6 +782,9 @@
  }
 
  .companies {
+    &__title {
+        margin-bottom: 16px;
+    }
     &-flex {
         display: none;
     }
@@ -742,6 +795,109 @@
     .show-link {
         &_desktop {
             display: none;
+        }
+    }
+    .technologies {
+        &__slider {
+            display: block;
+        }
+        &__flex {
+            display: none;
+        }
+    }
+
+    .prices {
+        &__title {
+            margin-bottom: 16px;
+        }
+        &__slider {
+            display: block;
+        }
+        .price {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3,56px);
+            row-gap: 16px;
+            justify-content: space-between;
+            background: #fff;
+            padding: 16px;
+            border-radius: 6px;
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                grid-column-start: 1;
+                grid-column-end: 1;
+                &:first-child {
+                    grid-column-start: 1;
+                    grid-column-end: 3; 
+                }
+                span {
+                    color: rgb(126, 126, 130);
+                    font-family: TT Lakes;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                }
+                p {
+                    color: rgb(27, 28, 33);
+                    font-family: TT Lakes;
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 18px;
+                    letter-spacing: 0.2px;
+                    text-align: left;
+                }
+            }
+            a {
+                border-radius: 16px;
+                text-align: left;
+                align-self: center;
+                padding: 4px 12px;
+                background: rgb(255, 62, 121);
+                color: rgb(255, 255, 255);
+                font-family: TT Lakes;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 24px;
+                letter-spacing: -0.15px;
+                text-transform: uppercase;
+                text-decoration: none;
+                position: relative;
+                width: 119px;
+                &::after {
+                    content: '';
+                    width: 24px;
+                    height: 24px;
+                    position: absolute;
+                    background: url("../icons/arrow-link_without-circle.svg");
+                    right: 8px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            &__list {
+                display: none;
+            }
+        }
+    }
+    .offer-text {
+        width: 100%;
+    }
+    .footer {
+        padding: 16px 0;
+        &-items {
+            flex-direction: column;
+            align-items: center;
+        }
+        &-author {
+            text-align: center;
+        }
+        &-descr {
+            width: unset;
+            text-align: unset;
         }
     }
 }

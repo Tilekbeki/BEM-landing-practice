@@ -1,9 +1,8 @@
 .service {
     padding: 42px 0px 0px 0px;//было 24 поставил 42
     &__title {
-        margin: 0 auto;
-        
-        margin-bottom: 8px;
+        width: 50%;
+        margin: 0 0 8px;
     }
     &-menu {
         margin-bottom: 16px;
