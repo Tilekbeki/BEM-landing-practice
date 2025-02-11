@@ -5,18 +5,15 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin  = require("css-minimizer-webpack-plugin");
 
+
 module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
   entry: {
-    main: "./js/companiesBlock.js",
-    technologySlider: "./js/technologiesBlock.js",
-    priceSlider: "./js/pricesSlider.js",
-    formFeedBack: "./js/openFormFeedback.js",
-    css: "./js/style.js"
+    main: "./js/index.js"
   },
   output: {
-    filename: "./js/[name].[contenthash].js",
+    filename: "js/boundle.js",
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
@@ -86,12 +83,22 @@ module.exports = {
         
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
-        // generator: {
-        //   filename: 'images/[name][ext]',
-        // },
-      },
+        test: /\.(?:js|mjs|cjs)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ["@babel/preset-env", {
+                useBuiltIns: "usage",
+                corejs: 3,
+                modules: false
+              }]
+            ],
+            plugins: ["@babel/plugin-transform-runtime"]
+          }
+        }
+      }
     ]
   }
   

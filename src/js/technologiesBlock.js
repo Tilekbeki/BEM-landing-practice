@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 // import Swiper and modules styles
-import {showItems, showBurgerMenu } from './functions';
+import {showItems } from './functions';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -24,4 +24,3 @@ var swiper = new Swiper(".technology-slider", {
 
 showItems('.technologies__button', '.technologies-flex');
 
-showBurgerMenu('.menu-burger','.menu-mobile', '.menu-mobile__close');
